@@ -42,8 +42,8 @@ main h2 {
 
 /* Сітка карток */
 .dogs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  display: flex; /* замість grid, щоб легко контролювати розмір */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 0 20px 20px;
@@ -52,17 +52,19 @@ main h2 {
 /* Картка */
 .card {
   background: white;
-  width: 390px;       /* фіксована ширина */
-  height: 460px;      /* фіксована висота */
-  padding-top: 65px;  /* відступ зверху до картинки */
+  width: 390px;        /* фіксована ширина */
+  height: 460px;       /* фіксована висота */
+  padding-top: 65px;   /* внутрішній відступ до картинки */
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;      /* забороняє стискання картки */
 }
 
+/* Картинка всередині картки */
 .card img {
   width: 260px;        /* фіксована ширина картинки */
   height: 260px;       /* фіксована висота картинки */
@@ -71,6 +73,7 @@ main h2 {
   margin-bottom: 15px; /* відступ між картинкою та заголовком */
 }
 
+/* Заголовок і кнопка */
 .card h3 {
   margin: 0;
   font-weight: 600;
@@ -78,7 +81,7 @@ main h2 {
 
 .card a {
   display: inline-block;
-  margin-top: auto;   /* кнопка внизу картки */
+  margin-top: auto;   /* кнопка завжди внизу картки */
   padding: 8px 15px;
   background: #4a34eb;
   color: white;
@@ -92,7 +95,7 @@ main h2 {
   background: #2b1abf;
 }
 
-/* Популярна сторінка */
+/* Інші секції залишаються без змін */
 .info {
   text-align: center;
   padding: 20px;
@@ -155,7 +158,6 @@ main h2 {
   color: white;
 }
 
-/* Футер */
 footer {
   background: #4a34eb;
   color: white;
