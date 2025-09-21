@@ -1,6 +1,12 @@
+/* Гарантуємо правильну модель блоку для всіх елементів */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Загальні стилі */
 body {
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
   background: #ffd9d9;
   color: #222;
@@ -14,29 +20,6 @@ header {
 }
 
 header h1 {
-  margin: 0;
-  font-weight: 700;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-weight: 500;
-}
-
-nav a.active {
-  background: #2b1abf;
-  border-radius: 5px;
-}
-
-main h2 {
-  text-align: center;
-  margin: 20px 0;
   font-weight: 700;
 }
 
@@ -46,45 +29,41 @@ main h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 0 20px 20px;
-  box-sizing: border-box;
+  padding: 20px;
 }
 
 /* Картка */
 .card {
+  flex: 0 0 auto;          /* забороняє тягнутися */
+  width: 390px;             /* фіксована ширина */
+  height: 460px;            /* фіксована висота */
   background: white;
-  width: 390px;        /* фіксована ширина */
-  height: 460px;       /* фіксована висота */
-  padding-top: 65px;   /* внутрішній відступ зверху */
-  text-align: center;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding-top: 65px;        /* відступ до картинки */
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;      /* не стискається */
-  box-sizing: border-box;
 }
 
 /* Картинка */
 .card img {
-  width: 260px;        /* фіксована ширина */
-  height: 260px;       /* фіксована висота */
-  object-fit: cover;   /* обрізає зайве без спотворення */
+  width: 260px !important;   /* фіксована ширина */
+  height: 260px !important;  /* фіксована висота */
+  object-fit: cover;         /* обрізає зайве без спотворення */
   border-radius: 5px;
   margin-bottom: 15px;
 }
 
 /* Заголовок */
 .card h3 {
-  margin: 0;
   font-weight: 600;
 }
 
 /* Кнопка */
 .card a {
-  display: inline-block;
-  margin-top: auto;   /* кнопка завжди внизу картки */
+  margin-top: auto;
   padding: 8px 15px;
   background: #4a34eb;
   color: white;
@@ -97,6 +76,7 @@ main h2 {
 .card a:hover {
   background: #2b1abf;
 }
+
 
 /* Інші секції */
 .info {
