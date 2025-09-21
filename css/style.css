@@ -43,6 +43,11 @@ nav a.active {
   border-radius: 5px;
 }
 
+.nav{
+  display: flex;
+    justify-content: space-between;
+}
+
 main h2 {
   text-align: center;
   margin: 20px 0;
