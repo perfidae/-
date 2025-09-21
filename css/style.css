@@ -36,6 +36,8 @@ nav a {
   text-decoration: none;
   padding: 10px 20px;
   font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 nav a.active {
