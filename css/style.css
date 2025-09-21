@@ -49,16 +49,24 @@ main h2 {
 
 .card {
   background: white;
-  padding: 10px;
+  width: 390px;       /* фіксована ширина */
+  height: 460px;      /* фіксована висота */
+  padding-top: 65px;  /* внутрішній відступ зверху до картинки */
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 0 auto;     /* центр картки у колонці */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .card img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;    /* щоб не виходила за межі картки */
+  max-height: 290px;  /* адаптовано під висоту картки minus padding */
   border-radius: 5px;
+  object-fit: cover;  /* зберігає пропорції і обрізає зайве */
 }
 
 .card h3 {
