@@ -35,8 +35,7 @@ nav a {
   text-decoration: none;
   padding: 10px 20px;
   font-weight: 500;
-  margin-top: 15px;
-  margin-bottom: 15px;
+
 }
 
 nav a.active {
@@ -46,7 +45,9 @@ nav a.active {
 
 .nav{
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 main h2 {
