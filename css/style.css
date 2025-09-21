@@ -23,18 +23,40 @@ header h1 {
   font-weight: 700;
 }
 
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+nav a.active {
+  background: #2b1abf;
+  border-radius: 5px;
+}
+
+main h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
 /* Сітка карток */
 .dogs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 390px); /* по 2 картки в рядку */
+  justify-content: center;                 /* центр рядка */
+  row-gap: 20px;                           /* відстань між рядками */
+  column-gap: 20px;                        /* відстань між картками в рядку */
   padding: 20px;
 }
 
 /* Картка */
 .card {
-  flex: 0 0 auto;          /* забороняє тягнутися */
   width: 390px;             /* фіксована ширина */
   height: 460px;            /* фіксована висота */
   background: white;
@@ -45,6 +67,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;           /* не стискається */
 }
 
 /* Картинка */
@@ -63,7 +86,7 @@ header h1 {
 
 /* Кнопка */
 .card a {
-  margin-top: auto;
+  margin-top: auto;   /* кнопка завжди внизу картки */
   padding: 8px 15px;
   background: #4a34eb;
   color: white;
@@ -77,8 +100,7 @@ header h1 {
   background: #2b1abf;
 }
 
-
-/* Інші секції */
+/* Популярна сторінка */
 .info {
   text-align: center;
   padding: 20px;
@@ -141,6 +163,7 @@ header h1 {
   color: white;
 }
 
+/* Футер */
 footer {
   background: #4a34eb;
   color: white;
