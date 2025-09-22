@@ -44,7 +44,6 @@ nav a.active {
 }
 
 .nav{
-  display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
 }
